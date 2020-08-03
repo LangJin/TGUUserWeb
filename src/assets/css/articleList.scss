@@ -1,0 +1,356 @@
+$common_float: left;
+$a_color: #999;
+
+.category_box {
+  width: 300px;
+  margin-top: 30px;
+  padding-bottom: 8px;
+  background: #f7f7f8;
+  overflow-y: auto;
+  ul{
+    li{
+      padding: 10px;
+    }
+  }
+  .nav_child{
+    margin-left: 50px;
+    padding: 10px 0;
+    li{
+      color: #666;
+      padding: 0px;
+      margin-top: 5px;
+      line-height: 2;
+      
+    }
+  }
+  .active {
+    color: #4285f4 !important
+  }
+}
+
+.category_box ul>li {
+  border-bottom: dotted 1px #dedede;
+  font-size: 18px;
+  cursor: pointer;
+  color: #333;
+
+  &:hover {
+    color: #4285f4;
+  }
+}
+
+
+.category_box ul>li i {
+  margin-left: 5px;
+}
+
+.category_box ul>li ul li {
+  border-bottom: 0;
+  font-size: 14px;
+  color: #333;
+}
+
+.cancle-match {
+  position: relative;
+
+  &:hover {
+    .cancal-matching {
+      .cancal-matching-body {
+        display: block;
+      }
+    }
+  }
+}
+
+.cancal-matching {
+  position: relative;
+  display: flex;
+  justify-content: center;
+
+  .cancal-matching-body {
+    background-image: linear-gradient(180deg, #e6e6e6 0%, #e6e6e6 100%),
+      linear-gradient(#e6e6e6, #e6e6e6);
+    justify-content: space-around;
+    align-items: center;
+    width: 96px;
+    cursor: pointer;
+    border: 1px solid #eee;
+    color: #666;
+    display: none;
+    position: absolute;
+    left: 0;
+    top: -26px;
+    z-index: 2;
+  }
+}
+
+
+
+.el-tabs__active-bar {
+  background-color: transparent !important;
+}
+
+.page {
+  width: 1200px;
+  min-height: 800px;
+  margin: 0 auto;
+  margin-top: 30px;
+
+  .blog_left {
+    width: 880px;
+    float: left;
+    margin-right: 20px;
+  }
+
+  .pagination {
+    margin: 30px auto;
+    text-align: center;
+    font-size: 12px;
+  }
+
+  .right_box {
+    float: right;
+
+    .guid {
+      ul>li {
+        display: inline-block;
+        padding: 0 20px;
+        text-align: center;
+        font-size: 12px;
+      }
+    }
+
+  }
+}
+
+.article_container {
+  ul {
+    li:hover {
+      background-color: #f6f9fe;
+    }
+
+    li {
+      padding: 20px 20px 20px 10px;
+      border-bottom: 1px solid #eee;
+      font-size: 12px;
+      position: relative;
+      overflow: hidden;
+
+      .userInfo {
+        line-height: 32px;
+        margin-bottom: 15px;
+        overflow: hidden;
+
+        .avatar {
+          width: 32px;
+          height: 32px;
+          border-radius: 50%;
+          display: block;
+          float: $common_float;
+          margin-right: 0px;
+        }
+
+        a {
+          color: #333;
+          float: $common_float;
+          margin-left: 10px;
+        }
+
+        .time {
+          color: $a_color;
+          float: $common_float;
+          margin-left: 10px;
+        }
+      }
+
+      .clearfix::before {
+        display: table;
+        line-height: 0;
+        content: "";
+      }
+
+      h2 {
+        line-height: 1;
+        margin-bottom: 15px;
+        font-size: 20px;
+      }
+
+      .article_detail {
+        color: #666;
+        height: 48px;
+        line-height: 24px;
+        overflow: hidden;
+        font-size: 14px;
+      }
+
+      .introduction {
+        overflow: hidden;
+        line-height: 24px;
+        padding-top: 15px;
+
+        .agree {
+          .like,
+          .liked {
+            padding: 0 10px;
+            color: #0084ff;
+            outline: none;
+            background: rgba(0, 132, 255, .1);
+            border-color: transparent;
+            border-radius: 3px;
+            font-size: 14px;
+            line-height: 32px;
+            text-align: center;
+            cursor: pointer;
+
+            .iconshengxu {
+              color: #0084ff;
+              vertical-align: middle;
+            }
+          }
+
+          .like:hover {
+            background-color: rgba(0, 132, 255, .15);
+          }
+
+          .liked {
+            color: #fff;
+            background: #0084ff;
+
+            .iconshengxu {
+              color: #fff;
+              vertical-align: middle;
+            }
+          }
+        }
+
+        .cancle_agree {
+          padding: 0 10px;
+          color: #0084ff;
+          background: rgba(0, 132, 255, .1);
+          border-color: transparent;
+          font-size: 14px;
+          line-height: 36px;
+          cursor: pointer;
+
+          &:hover {
+            background-color: rgba(0, 132, 255, .15);
+          }
+
+          .iconjiangxu {
+            color: #0084ff;
+            font-size: 14px;
+            vertical-align: middle;
+          }
+        }
+
+        p {
+          float: $common_float;
+          margin-right: 20px;
+          line-height: 36px;
+          font-size: 14px;
+
+          span {
+            color: #999;
+          }
+        }
+      }
+
+      .zan_favour_num {
+        color: #666;
+        padding: 0;
+        padding-left: 25px;
+        padding-top: 6px;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+
+        i {
+          font-size: 20px;
+        }
+
+        & i:hover {
+          color: orange;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+.follow_recommend {
+  h2 {
+    color: #424242;
+    cursor: pointer;
+    line-height: 1;
+    padding: 14px 20px;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  ul {
+    li {
+      float: left;
+      width: 405px;
+      padding: 28px 15px;
+      border: 0 none;
+
+      .avar {
+        float: $common_float;
+
+        img {
+          width: 78px;
+          height: 78px;
+          border-radius: 50%;
+          cursor: pointer;
+        }
+      }
+
+      .info {
+        float: $common_float;
+        width: 185px;
+        margin-left: 20px;
+
+        p {
+          margin-top: 2px;
+
+          span:nth-child(n+2) {
+            margin-left: 12px
+          }
+        }
+
+        p:nth-child(2) {
+          margin-top: 20px;
+        }
+      }
+
+      .is_follow {
+        float: $common_float;
+        width: 82px;
+        text-align: center;
+        margin-top: 20px;
+        background-color: #fff;
+        color: #4285f4;
+        border: 1px solid #4285f4;
+
+        &:hover {
+          color: #fff;
+          cursor: pointer;
+          background-color: #3477e6;
+        }
+      }
+
+      .followed {
+        float: $common_float;
+        width: 82px;
+        text-align: center;
+        margin-top: 20px;
+        color: #666;
+        border: 1px solid #999;
+        cursor: pointer;
+      }
+
+
+    }
+  }
+}
